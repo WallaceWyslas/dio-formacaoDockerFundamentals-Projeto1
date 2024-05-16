@@ -1,0 +1,12 @@
+services:
+  apache:
+    image: httpd
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website/:/usr/local/apache2/htdocs/
+    networks:
+      - website
+
+networks:
+  website:
